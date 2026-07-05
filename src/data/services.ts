@@ -130,11 +130,12 @@ export const serviceCategoryPreviews = [
     icon: "extensions" as const,
     href: "/stylists",
   },
-  {
-    title: "New Guest Consultation",
-    description: "Not sure where to start? We'll match you with the right stylist and service.",
-    priceNote: "Start here",
-    icon: "consultation" as const,
-    href: "/new-guest",
-  },
 ];
+
+export const newGuestConsultationPreview = {
+  title: "New Guest Consultation",
+  description:
+    "Not sure where to start? We'll match you with the right stylist and service.",
+  priceNote: "Start here",
+  href: "/new-guest",
+};

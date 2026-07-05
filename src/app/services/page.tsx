@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
-import ServiceIconCard from "@/components/ServiceIconCard";
+import ServiceCategoryGrid from "@/components/ServiceCategoryGrid";
 import ServiceAccordion from "@/components/ServiceAccordion";
 import CTASection from "@/components/CTASection";
-import {
-  serviceCategories,
-  serviceCategoryPreviews,
-  servicesIntro,
-} from "@/data/services";
+import { serviceCategories, servicesIntro } from "@/data/services";
 import { siteInfo } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -34,10 +30,8 @@ export default function ServicesPage() {
               Browse by category, then explore full pricing in the menu below.
             </p>
           </div>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {serviceCategoryPreviews.map((category) => (
-              <ServiceIconCard key={category.title} {...category} />
-            ))}
+          <div className="mt-10">
+            <ServiceCategoryGrid />
           </div>
         </div>
       </section>

@@ -1,11 +1,10 @@
 import Hero from "@/components/Hero";
-import ServiceIconCard from "@/components/ServiceIconCard";
+import ServiceCategoryGrid from "@/components/ServiceCategoryGrid";
 import CTASection from "@/components/CTASection";
 import StylistCard from "@/components/StylistCard";
 import Link from "next/link";
 import Image from "next/image";
 import { siteInfo, studioAmenities, testimonials } from "@/data/site";
-import { serviceCategoryPreviews } from "@/data/services";
 import { stylists } from "@/data/stylists";
 
 export default function HomePage() {
@@ -41,10 +40,8 @@ export default function HomePage() {
               Thoughtful color, cuts, treatments, and special occasion styling — tailored to you.
             </p>
           </div>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {serviceCategoryPreviews.map((category) => (
-              <ServiceIconCard key={category.title} {...category} />
-            ))}
+          <div className="mt-12">
+            <ServiceCategoryGrid />
           </div>
           <div className="mt-10 text-center">
             <Link
