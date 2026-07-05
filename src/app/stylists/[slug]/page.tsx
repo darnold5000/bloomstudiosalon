@@ -1,10 +1,12 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { CalendlyEmbed } from "@/components/schedule/CalendlyEmbed";
 import CTASection from "@/components/CTASection";
+import { getCalendlyUrl, usesCalendly } from "@/lib/calendly";
 import { getStylistBySlug, stylists } from "@/data/stylists";
 import { siteInfo } from "@/data/site";
+import type { Metadata } from "next";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -31,11 +33,19 @@ export default async function StylistPage({ params }: Props) {
 
   if (!stylist) notFound();
 
-  const bookingHref =
-    stylist.bookingUrl ||
-    (stylist.email ? `mailto:${stylist.email}?subject=Appointment%20Request` : undefined) ||
-    stylist.phoneHref ||
-    siteInfo.links.bookOnline;
+  const hasCalendly = usesCalendly(slug);
+  const calendlyUrl = getCalendlyUrl(slug);
+
+  const bookingHref = hasCalendly
+    ? "#book"
+    : stylist.bookingUrl ||
+      (stylist.email ? `mailto:${stylist.email}?subject=Appointment%20Request` : undefined) ||
+      stylist.phoneHref ||
+      siteInfo.links.bookOnline;
+
+  const bookingLabel = hasCalendly
+    ? `Book with ${stylist.name.split(" ")[0]}`
+    : stylist.bookingLabel || "Book Appointment";
 
   return (
     <>
@@ -99,14 +109,23 @@ export default async function StylistPage({ params }: Props) {
             </div>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link
-                href={bookingHref}
-                target={stylist.bookingUrl ? "_blank" : undefined}
-                rel={stylist.bookingUrl ? "noopener noreferrer" : undefined}
-                className="rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-accent/90"
-              >
-                {stylist.bookingLabel || "Book Appointment"}
-              </Link>
+              {hasCalendly ? (
+                <a
+                  href="#book"
+                  className="rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-accent/90"
+                >
+                  {bookingLabel}
+                </a>
+              ) : (
+                <Link
+                  href={bookingHref!}
+                  target={stylist.bookingUrl ? "_blank" : undefined}
+                  rel={stylist.bookingUrl ? "noopener noreferrer" : undefined}
+                  className="rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-accent/90"
+                >
+                  {bookingLabel}
+                </Link>
+              )}
               {stylist.instagram && (
                 <Link
                   href={stylist.instagram}
@@ -138,11 +157,51 @@ export default async function StylistPage({ params }: Props) {
         </div>
       </section>
 
-      <CTASection
-        title={`Book with ${stylist.name.split(" ")[0]}`}
-        description="Ready for beautiful hair and a personalized guest experience? Book your appointment today."
-        showNewGuest={false}
-      />
+      {hasCalendly && (
+        <section id="book" className="scroll-mt-28 border-t border-border bg-background py-12 sm:py-16">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6">
+            <div className="mb-8 text-center">
+              <h2 className="font-serif text-3xl font-medium text-text sm:text-4xl">
+                Book with {stylist.name.split(" ")[0]}
+              </h2>
+              <p className="mt-3 text-muted">
+                Choose a time that works for you. We look forward to seeing you at Bloom Studio Salon.
+              </p>
+            </div>
+
+            <CalendlyEmbed url={calendlyUrl} />
+
+            {!calendlyUrl && (
+              <div className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row sm:justify-center">
+                {stylist.email && (
+                  <a
+                    href={`mailto:${stylist.email}?subject=Appointment%20Request`}
+                    className="rounded-full bg-accent px-7 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-accent/90"
+                  >
+                    Email {stylist.name.split(" ")[0]}
+                  </a>
+                )}
+                {stylist.phone && (
+                  <a
+                    href={stylist.phoneHref}
+                    className="rounded-full border border-border bg-surface px-7 py-3.5 text-center text-sm font-semibold text-text transition hover:border-accent hover:text-accent"
+                  >
+                    Call {stylist.phone}
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {!hasCalendly && (
+        <CTASection
+          title={`Book with ${stylist.name.split(" ")[0]}`}
+          description="Ready for beautiful hair and a personalized guest experience? Book your appointment today."
+          showNewGuest={false}
+        />
+      )}
     </>
   );
 }

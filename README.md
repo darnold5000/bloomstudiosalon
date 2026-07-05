@@ -34,6 +34,24 @@ public/images/   # Salon photography and brand assets
 - **Stylists:** `src/data/stylists.ts`
 - **Bridal pricing:** `src/data/bridal.ts`
 
+## Stylist scheduling (Calendly)
+
+Amanda, Brittany, Sydney, and Jillane use inline Calendly embeds on their profile pages. Jennifer Dodd continues to use Vagaro.
+
+1. Copy `.env.example` to `.env.local`
+2. Add each stylist's Calendly event URL:
+
+```bash
+NEXT_PUBLIC_CALENDLY_AMANDA_URL=https://calendly.com/...
+NEXT_PUBLIC_CALENDLY_BRITTANY_URL=https://calendly.com/...
+NEXT_PUBLIC_CALENDLY_SYDNEY_URL=https://calendly.com/...
+NEXT_PUBLIC_CALENDLY_JILLANE_URL=https://calendly.com/...
+```
+
+3. Restart the dev server after changing env vars
+
+If a URL is unset, the stylist page shows a placeholder plus email/phone fallback links.
+
 ## Build
 
 ```bash
