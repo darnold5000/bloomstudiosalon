@@ -25,25 +25,26 @@ export default function Hero({
           alt={imageAlt}
           fill
           priority
-          className="object-cover opacity-50"
+          className="object-cover object-center saturate-[1.12] contrast-[1.05]"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-text/90 via-text/70 to-text/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-black/5" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10" />
       </div>
 
       <div className="relative mx-auto flex min-h-[70vh] max-w-7xl flex-col justify-center px-4 py-20 sm:px-6 lg:min-h-[80vh] lg:px-8">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-accent-soft">
+        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-accent-soft [text-shadow:0_1px_6px_rgba(0,0,0,0.35)]">
           Avon, Indiana
         </p>
-        <h1 className="max-w-3xl font-serif text-4xl font-medium leading-tight text-white sm:text-5xl lg:text-6xl">
+        <h1 className="max-w-3xl font-serif text-4xl font-medium leading-tight text-white sm:text-5xl lg:text-6xl [text-shadow:0_2px_12px_rgba(0,0,0,0.4)]">
           {headline}
         </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85 sm:text-xl">
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/95 sm:text-xl [text-shadow:0_1px_8px_rgba(0,0,0,0.35)]">
           {subheadline}
         </p>
 
         {showTagline && (
-          <p className="mt-6 font-serif text-xl italic text-accent-soft sm:text-2xl">
+          <p className="mt-6 font-serif text-xl italic text-accent-soft sm:text-2xl [text-shadow:0_1px_8px_rgba(0,0,0,0.35)]">
             {siteInfo.tagline}
           </p>
         )}
