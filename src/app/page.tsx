@@ -3,7 +3,7 @@ import ServiceCategoryGrid from "@/components/ServiceCategoryGrid";
 import CTASection from "@/components/CTASection";
 import StylistCard from "@/components/StylistCard";
 import Link from "next/link";
-import Image from "next/image";
+import ContentImage from "@/components/ContentImage";
 import { siteInfo, studioAmenities, testimonials } from "@/data/site";
 import { stylists } from "@/data/stylists";
 
@@ -56,15 +56,10 @@ export default function HomePage() {
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-md">
-            <Image
-              src="/images/hero/salon-chairs.jpg"
-              alt="Stylist consultation at Bloom Studio Salon"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-          </div>
+          <ContentImage
+            src="/images/hero/salon-chairs.jpg"
+            alt="Stylist consultation at Bloom Studio Salon"
+          />
           <div>
             <h2 className="font-serif text-3xl font-medium text-text sm:text-4xl">New to Bloom?</h2>
             <p className="mt-4 text-lg leading-relaxed text-muted">
@@ -112,15 +107,11 @@ export default function HomePage() {
               Explore the studio →
             </Link>
           </div>
-          <div className="relative order-1 aspect-[4/3] overflow-hidden rounded-2xl shadow-md lg:order-2">
-            <Image
-              src="/images/studio/studio-1.jpg"
-              alt="Bloom Studio Salon interior with amenities"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-          </div>
+          <ContentImage
+            className="order-1 lg:order-2"
+            src="/images/studio/studio-1.jpg"
+            alt="Bloom Studio Salon interior with amenities"
+          />
         </div>
       </section>
 
@@ -132,7 +123,7 @@ export default function HomePage() {
               Choose your stylist based on experience, specialty, and the look you want to achieve.
             </p>
           </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3 xl:grid-cols-5">
             {stylists.map((stylist) => (
               <StylistCard key={stylist.slug} stylist={stylist} />
             ))}

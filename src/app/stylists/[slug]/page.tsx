@@ -41,13 +41,13 @@ export default async function StylistPage({ params }: Props) {
     <>
       <section className="bg-surface py-12 sm:py-16">
         <div className="mx-auto grid max-w-6xl items-start gap-10 px-4 sm:px-6 lg:grid-cols-[320px_1fr] lg:px-8">
-          <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-2xl shadow-md lg:mx-0">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl bg-background shadow-md sm:aspect-[3/4] lg:mx-0">
             <Image
               src={stylist.image}
               alt={stylist.name}
               fill
               priority
-              className="object-cover"
+              className="object-contain object-top sm:object-cover sm:object-top"
               sizes="(max-width: 1024px) 320px, 320px"
             />
           </div>

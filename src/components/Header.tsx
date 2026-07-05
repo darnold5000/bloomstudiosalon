@@ -1,5 +1,9 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { siteInfo } from "@/data/site";
 
 const navLinks = [
@@ -12,10 +16,34 @@ const navLinks = [
 ];
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="/" className="flex shrink-0 items-center gap-3">
+        <Link href="/" className="flex shrink-0 items-center gap-3" onClick={closeMenu}>
           <Image
             src="/images/brand/logo.png"
             alt={siteInfo.name}
@@ -50,38 +78,63 @@ export default function Header() {
             Book Now
           </Link>
 
-          <details className="relative lg:hidden">
-            <summary className="flex cursor-pointer list-none items-center justify-center rounded-lg border border-border p-2.5 text-text [&::-webkit-details-marker]:hidden">
-              <span className="sr-only">Open menu</span>
+          <button
+            type="button"
+            className="flex items-center justify-center rounded-lg border border-border p-2.5 text-text lg:hidden"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-nav"
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            <span className="sr-only">{menuOpen ? "Close menu" : "Open menu"}</span>
+            {menuOpen ? (
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
-            </summary>
-            <nav
-              className="absolute right-0 top-full mt-2 w-56 rounded-2xl border border-border bg-surface p-3 shadow-lg"
-              aria-label="Mobile navigation"
-            >
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="block rounded-lg px-3 py-2.5 text-sm font-medium text-text transition hover:bg-accent-soft/40"
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <Link
-                href={siteInfo.links.bookOnline}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 block rounded-full bg-accent px-4 py-2.5 text-center text-sm font-semibold text-white"
-              >
-                Book Now
-              </Link>
-            </nav>
-          </details>
+            )}
+          </button>
         </div>
       </div>
+
+      {menuOpen && (
+        <button
+          type="button"
+          className="fixed inset-0 top-[57px] z-40 bg-black/20 lg:hidden"
+          aria-label="Close menu"
+          onClick={closeMenu}
+        />
+      )}
+
+      <nav
+        id="mobile-nav"
+        className={`border-t border-border bg-surface px-4 py-3 lg:hidden ${menuOpen ? "block" : "hidden"}`}
+        aria-label="Mobile navigation"
+      >
+        <div className="mx-auto flex max-w-7xl flex-col gap-1">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={closeMenu}
+              className="rounded-lg px-3 py-2.5 text-sm font-medium text-text transition hover:bg-accent-soft/40"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            href={siteInfo.links.bookOnline}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeMenu}
+            className="mt-2 block rounded-full bg-accent px-4 py-2.5 text-center text-sm font-semibold text-white"
+          >
+            Book Now
+          </Link>
+        </div>
+      </nav>
 
       <div className="border-t border-border bg-surface px-4 py-2 sm:hidden">
         <Link

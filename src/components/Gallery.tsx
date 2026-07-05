@@ -10,13 +10,13 @@ export default function Gallery({ images }: GalleryProps) {
       {images.map((image) => (
         <div
           key={image.src}
-          className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-sm"
+          className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-background shadow-sm sm:aspect-[3/4]"
         >
           <Image
             src={image.src}
             alt={image.alt}
             fill
-            className="object-cover"
+            className="object-contain object-center sm:object-cover sm:object-center"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
