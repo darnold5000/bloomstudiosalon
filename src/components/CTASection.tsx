@@ -21,9 +21,7 @@ export default function CTASection({
         <p className="mt-4 text-lg leading-relaxed text-muted">{description}</p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <Link
-            href={siteInfo.links.bookOnline}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={siteInfo.links.bookNow}
             className="rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-accent/90"
           >
             Book Online

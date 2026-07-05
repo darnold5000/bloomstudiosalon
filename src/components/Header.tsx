@@ -70,9 +70,7 @@ export default function Header() {
 
         <div className="flex items-center gap-3">
           <Link
-            href={siteInfo.links.bookOnline}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={siteInfo.links.bookNow}
             className="hidden rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-accent/90 lg:inline-block"
           >
             Book Now
@@ -124,9 +122,7 @@ export default function Header() {
                 </Link>
               ))}
               <Link
-                href={siteInfo.links.bookOnline}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={siteInfo.links.bookNow}
                 onClick={closeMenu}
                 className="mt-2 block rounded-full bg-accent px-4 py-2.5 text-center text-sm font-semibold text-white"
               >

@@ -51,9 +51,7 @@ export default function Hero({
 
         <div className="mt-10 flex flex-wrap gap-3 sm:gap-4">
           <Link
-            href={siteInfo.links.bookOnline}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={siteInfo.links.bookNow}
             className="rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white shadow-lg transition hover:bg-accent/90"
           >
             Book Now

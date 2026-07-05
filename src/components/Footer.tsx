@@ -45,9 +45,7 @@ export default function Footer() {
           <p className="mt-1 text-white/75">{siteInfo.hoursNote}</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
-              href={siteInfo.links.bookOnline}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={siteInfo.links.bookNow}
               className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-accent/90"
             >
               Book Now

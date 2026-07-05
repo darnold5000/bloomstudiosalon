@@ -24,6 +24,7 @@ export const siteInfo = {
     yelp: "https://www.yelp.com/biz/bloom-studio-salon-avon",
   },
   links: {
+    bookNow: "/stylists",
     bookOnline:
       "https://www.vagaro.com//Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVHwSNCa/tXn7ub55Ota6Kz+Ks2b6HFGOJnG9vphKKebzE+rv1BwSbQ2Z7c8YXZvaMgmPWWutsytOir6yTKZczmkppoU2io7h5Tsd2hzOI/vb+JZ1xQipXHxF3BvEY6VEY135hAFGsFzVfnG/vy1DolZN/3pSB/3m1zRF6KEZ/9lGIzpuTjHsjmtnk5OZdXvxx+TtRdROuClLqryA7ZjRPPMm4f/57Srr8QnHMNWP/8Zr6MfKfJhfzOEc3LhLVnS96729zwLB595iuPGeELhtzttEmjzoWtx4OMyMWlN4HiXVXpgPrEJ9z7Dp5AhGTH4TzOHMA6qL9dSt/arwBkR21sYPpwBkby6Z+Bq50juZ0/4V31ZryZK0m6ndiydsFAkfi4D85Uhyeno6nlJTKeFV8VxW9o4D0FuiRltmZq77jnGJ",
     newGuestForm:
