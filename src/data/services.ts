@@ -86,3 +86,55 @@ export const serviceCategories: ServiceCategory[] = [
 
 export const servicesIntro =
   "Every appointment at Bloom is personalized to your hair, your goals, and your stylist's recommendations. Pricing varies by stylist, hair length, density, and time required. If you are unsure what to book, we recommend starting with a consultation.";
+
+export const serviceCategoryPreviews = [
+  {
+    title: "Color",
+    description: "Highlights, balayage, root touch-ups, and vivid color.",
+    priceNote: "Starting at $30+",
+    icon: "color" as const,
+    href: "#color",
+  },
+  {
+    title: "Haircut & Style",
+    description: "Personalized cuts and styling for every age and occasion.",
+    priceNote: "Starting at $5",
+    icon: "scissors" as const,
+    href: "#haircut-style",
+  },
+  {
+    title: "Treatments",
+    description: "Brazilian Blowout, keratin, deep conditioning, and more.",
+    priceNote: "Starting at $15+",
+    icon: "treatment" as const,
+    href: "#treatments",
+  },
+  {
+    title: "Bridal",
+    description: "Wedding hair, makeup, and special event styling.",
+    priceNote: "View bridal services",
+    icon: "bridal" as const,
+    href: "/bridal",
+  },
+  {
+    title: "Lash & Brow",
+    description: "Lash lifts, tints, waxing, and brow shaping.",
+    priceNote: "Starting at $5+",
+    icon: "lash" as const,
+    href: "#waxing-lash-brow",
+  },
+  {
+    title: "Extensions",
+    description: "Hand-tied and beaded weft extensions by expert stylists.",
+    priceNote: "View stylists",
+    icon: "extensions" as const,
+    href: "/stylists",
+  },
+  {
+    title: "New Guest Consultation",
+    description: "Not sure where to start? We'll match you with the right stylist and service.",
+    priceNote: "Start here",
+    icon: "consultation" as const,
+    href: "/new-guest",
+  },
+];
