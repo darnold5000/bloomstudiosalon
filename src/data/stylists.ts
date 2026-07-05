@@ -1,10 +1,13 @@
 export type Stylist = {
   slug: string;
   name: string;
+  preferredName?: string;
   title: string;
   image: string;
   bio: string;
+  bioContinued?: string;
   mission?: string;
+  beliefs?: string;
   specialties: string[];
   services: string[];
   bookingUrl?: string;
@@ -20,12 +23,17 @@ export const stylists: Stylist[] = [
   {
     slug: "jennifer",
     name: "Jennifer Dodd",
+    preferredName: "Jenn",
     title: "Master Hairstylist & Salon Owner",
     image: "/images/stylists/jennifer.jpg",
     yearsExperience: "18+ years",
-    bio: "Hi loves! I'm a Master Hairstylist from Indianapolis, IN. I specialize in lived-in color, grey blending, hand-tied extensions, and bridal styling. When I'm out of the salon you can catch me with a good coffee in hand, working in my gardens, reading a good book, and being with my children.",
+    bio: "Hi loves! I'm a Master Hairstylist from Indianapolis, IN. I specialize in lived-in color, grey blending, hand-tied extensions, and also your bridal girl. When I'm out of the salon you can catch me with a good coffee in hand, working in my gardens, a good book, and being with my children.",
+    bioContinued:
+      "I've been in the industry for 18+ years! My passion for beauty has turned my beautiful life into an amazing journey. I've been an independent stylist most of those years and a salon owner. I really love what I do and am so grateful to be able to share my passion with others.",
     mission:
       "When you are a modern day mama wearing all the hats, you sometimes just need a little escape. I get it, and that's why it is engrained in my mission. I want your time in my chair to be impactful.",
+    beliefs:
+      "I believe hair is a part of our identity. I believe you should love your hair every day in between appointments. I believe when you invest in me as your stylist, you are investing in amazing hair and experience. That means being attentive and delivering realistic, beautiful results. Most importantly, I believe in offering signature color and extension techniques that create looks that last so you can focus on what is important to you.",
     specialties: [
       "Lived-in color",
       "Grey blending",

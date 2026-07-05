@@ -11,9 +11,14 @@ export default function HomePage() {
   return (
     <>
       <Hero
-        headline="Modern hair, personalized for you."
-        subheadline="A luxury four-chair salon in Avon, Indiana focused on thoughtful consultations, beautiful hair, and a guest experience that feels personal from the moment you walk in."
-        showTagline
+        headline={
+          <>
+            Modern hair,
+            <br />
+            personalized for you.
+          </>
+        }
+        subheadline="Luxury hair color, cuts, treatments, and bridal styling in a boutique four-chair salon."
       />
 
       <section className="py-16 sm:py-20">

@@ -42,16 +42,17 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur-sm">
-      <div className="relative z-50 mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="/" className="flex shrink-0 items-center gap-3" onClick={closeMenu}>
+      <div className="relative z-50 mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 sm:px-6 lg:px-8">
+        <Link href="/" className="flex shrink-0 items-center" onClick={closeMenu}>
           <Image
             src="/images/brand/logo.png"
             alt={siteInfo.name}
-            width={44}
-            height={44}
-            className="h-10 w-10 rounded-full object-cover"
+            width={220}
+            height={88}
+            priority
+            className="h-10 w-auto object-contain sm:h-11 lg:h-12"
           />
-          <span className="hidden font-serif text-lg font-medium tracking-wide text-text sm:block">
+          <span className="ml-3 hidden font-serif text-lg font-medium tracking-wide text-text md:block">
             Bloom Studio Salon
           </span>
         </Link>

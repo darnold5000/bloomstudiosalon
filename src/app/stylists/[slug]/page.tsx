@@ -76,17 +76,20 @@ function JenniferProfile({ stylist }: { stylist: Stylist }) {
               {stylist.yearsExperience}
             </p>
             <h1 className="mt-2 font-serif text-4xl font-medium text-text sm:text-5xl">
-              {stylist.name}
+              I&apos;m {stylist.preferredName ?? stylist.name.split(" ")[0]}
             </h1>
-            <p className="mt-2 text-lg text-muted">{stylist.title}</p>
+            <p className="mt-1 text-lg text-muted">{stylist.title}</p>
 
             <div className="mt-6 space-y-4 leading-relaxed text-muted">
               <p>{stylist.bio}</p>
+              {stylist.bioContinued && <p>{stylist.bioContinued}</p>}
+              <p className="font-medium text-text">I know how sacred a hair appointment can be.</p>
               {stylist.mission && (
                 <p className="border-l-4 border-accent-soft pl-4 font-medium italic text-text">
                   {stylist.mission}
                 </p>
               )}
+              {stylist.beliefs && <p>{stylist.beliefs}</p>}
             </div>
 
             <ul className="mt-6 flex flex-wrap gap-2">
