@@ -132,18 +132,10 @@ export default function HomePage() {
               Choose your stylist based on experience, specialty, and the look you want to achieve.
             </p>
           </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {stylists.slice(0, 3).map((stylist) => (
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+            {stylists.map((stylist) => (
               <StylistCard key={stylist.slug} stylist={stylist} />
             ))}
-          </div>
-          <div className="mt-10 text-center">
-            <Link
-              href="/stylists"
-              className="text-sm font-semibold text-accent transition hover:underline"
-            >
-              View all stylists →
-            </Link>
           </div>
         </div>
       </section>

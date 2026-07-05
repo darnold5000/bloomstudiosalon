@@ -88,7 +88,7 @@ export const stylists: Stylist[] = [
     slug: "jillane",
     name: "Jillane",
     title: "Licensed Cosmetologist",
-    image: "/images/stylists/jillane.jpg",
+    image: "/images/stylists/jillane.png",
     yearsExperience: "3 years",
     bio: "Hi, I'm Jillane! I'm a licensed cosmetologist and have been doing hair for three years now. I firmly believe in expressing who you are on the inside and in every way you can. Don't be afraid to have fun! Fashion colors and funky haircuts are my personal favorites. When I'm not working, I'm usually attending concerts with my high school sweetheart or watching shows with our birdie named Frankie.",
     specialties: ["Fashion colors", "Creative haircuts", "Vivid color"],
