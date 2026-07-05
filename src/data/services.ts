@@ -93,21 +93,21 @@ export const serviceCategoryPreviews = [
     description: "Highlights, balayage, root touch-ups, and vivid color.",
     priceNote: "Starting at $30+",
     icon: "color" as const,
-    href: "#color",
+    href: "/services#color",
   },
   {
     title: "Haircut & Style",
     description: "Personalized cuts and styling for every age and occasion.",
     priceNote: "Starting at $5",
     icon: "scissors" as const,
-    href: "#haircut-style",
+    href: "/services#haircut-style",
   },
   {
     title: "Treatments",
     description: "Brazilian Blowout, keratin, deep conditioning, and more.",
     priceNote: "Starting at $15+",
     icon: "treatment" as const,
-    href: "#treatments",
+    href: "/services#treatments",
   },
   {
     title: "Bridal",
@@ -121,7 +121,7 @@ export const serviceCategoryPreviews = [
     description: "Lash lifts, tints, waxing, and brow shaping.",
     priceNote: "Starting at $5+",
     icon: "lash" as const,
-    href: "#waxing-lash-brow",
+    href: "/services#waxing-lash-brow",
   },
   {
     title: "Extensions",

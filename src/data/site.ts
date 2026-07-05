@@ -47,45 +47,6 @@ export const testimonials = [
   },
 ];
 
-export const servicePreviewCategories = [
-  {
-    title: "Color",
-    description: "Highlights, balayage, root touch-ups, and vivid color.",
-    href: "/services#color",
-    image: "/images/services/hair-color.jpg",
-  },
-  {
-    title: "Haircut & Style",
-    description: "Personalized cuts and styling for every age and occasion.",
-    href: "/services#haircut-style",
-    image: "/images/hero/salon-lifestyle.jpg",
-  },
-  {
-    title: "Treatments",
-    description: "Brazilian Blowout, keratin, deep conditioning, and more.",
-    href: "/services#treatments",
-    image: "/images/services/treatment.jpg",
-  },
-  {
-    title: "Bridal",
-    description: "Wedding hair, makeup, and special event styling.",
-    href: "/bridal",
-    image: "/images/gallery/gallery-1.jpg",
-  },
-  {
-    title: "Extensions",
-    description: "Hand-tied and beaded weft extensions by expert stylists.",
-    href: "/stylists/jennifer",
-    image: "/images/gallery/gallery-2.jpg",
-  },
-  {
-    title: "Lash & Brow",
-    description: "Lash lifts, tints, waxing, and brow shaping.",
-    href: "/services#waxing-lash-brow",
-    image: "/images/gallery/gallery-3.jpg",
-  },
-];
-
 export const studioAmenities = [
   "Four-chair luxury salon",
   "Snack bar with healthy choices",
