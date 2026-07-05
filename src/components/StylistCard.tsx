@@ -23,7 +23,7 @@ export default function StylistCard({ stylist }: { stylist: Stylist }) {
         <p className="mt-1 text-sm text-muted">{stylist.title}</p>
         <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted sm:mt-3">{stylist.bio}</p>
         <span className="mt-3 inline-block text-sm font-semibold text-accent transition group-hover:underline sm:mt-4">
-          View profile →
+          Book with {stylist.name.split(" ")[0]} →
         </span>
       </div>
     </Link>
