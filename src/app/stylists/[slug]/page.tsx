@@ -194,7 +194,7 @@ function CalendlyStylistProfile({
             </p>
           </div>
 
-          <CalendlyEmbed url={calendlyUrl} />
+          <CalendlyEmbed key={stylist.slug} url={calendlyUrl} />
 
           {calendlyUrl ? (
             <StylistContactLinks stylist={stylist} />
