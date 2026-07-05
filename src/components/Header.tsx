@@ -42,15 +42,15 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur-sm">
-      <div className="relative z-50 mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex shrink-0 items-center" onClick={closeMenu}>
+      <div className="relative z-50 mx-auto flex h-14 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-16 lg:px-8">
+        <Link href="/" className="flex h-full shrink-0 items-center overflow-visible" onClick={closeMenu}>
           <Image
             src="/images/brand/logo.png"
             alt={siteInfo.name}
-            width={280}
-            height={112}
+            width={400}
+            height={400}
             priority
-            className="h-14 w-auto max-w-[220px] object-contain lg:h-16"
+            className="h-[4.25rem] w-auto max-w-[9.5rem] object-contain object-left sm:h-16 sm:max-w-[10.5rem] lg:h-[4.5rem] lg:max-w-[11rem]"
           />
           <span className="ml-3 hidden font-serif text-lg font-medium tracking-wide text-text md:block">
             Bloom Studio Salon
@@ -79,7 +79,7 @@ export default function Header() {
 
           <button
             type="button"
-            className="flex items-center justify-center rounded-lg border border-border p-2.5 text-text lg:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-border text-text lg:hidden"
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
             onClick={() => setMenuOpen((open) => !open)}
