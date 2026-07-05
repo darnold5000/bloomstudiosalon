@@ -42,7 +42,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+      <div className="relative z-50 mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="flex shrink-0 items-center gap-3" onClick={closeMenu}>
           <Image
             src="/images/brand/logo.png"
@@ -73,7 +73,7 @@ export default function Header() {
             href={siteInfo.links.bookOnline}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-accent/90 sm:inline-block"
+            className="hidden rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-accent/90 lg:inline-block"
           >
             Book Now
           </Link>
@@ -100,52 +100,42 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <button
-          type="button"
-          className="fixed inset-0 top-[57px] z-40 bg-black/20 lg:hidden"
-          aria-label="Close menu"
-          onClick={closeMenu}
-        />
-      )}
-
-      <nav
-        id="mobile-nav"
-        className={`border-t border-border bg-surface px-4 py-3 lg:hidden ${menuOpen ? "block" : "hidden"}`}
-        aria-label="Mobile navigation"
-      >
-        <div className="mx-auto flex max-w-7xl flex-col gap-1">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={closeMenu}
-              className="rounded-lg px-3 py-2.5 text-sm font-medium text-text transition hover:bg-accent-soft/40"
-            >
-              {link.label}
-            </Link>
-          ))}
-          <Link
-            href={siteInfo.links.bookOnline}
-            target="_blank"
-            rel="noopener noreferrer"
+        <>
+          <button
+            type="button"
+            className="fixed inset-0 z-40 bg-black/20 lg:hidden"
+            aria-label="Close menu"
             onClick={closeMenu}
-            className="mt-2 block rounded-full bg-accent px-4 py-2.5 text-center text-sm font-semibold text-white"
+          />
+          <nav
+            id="mobile-nav"
+            className="relative z-50 border-t border-border bg-surface px-4 py-3 lg:hidden"
+            aria-label="Mobile navigation"
           >
-            Book Now
-          </Link>
-        </div>
-      </nav>
-
-      <div className="border-t border-border bg-surface px-4 py-2 sm:hidden">
-        <Link
-          href={siteInfo.links.bookOnline}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-full rounded-full bg-accent py-2.5 text-center text-sm font-semibold text-white"
-        >
-          Book Now
-        </Link>
-      </div>
+            <div className="mx-auto flex max-w-7xl flex-col gap-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={closeMenu}
+                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-text transition hover:bg-accent-soft/40"
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Link
+                href={siteInfo.links.bookOnline}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenu}
+                className="mt-2 block rounded-full bg-accent px-4 py-2.5 text-center text-sm font-semibold text-white"
+              >
+                Book Now
+              </Link>
+            </div>
+          </nav>
+        </>
+      )}
     </header>
   );
 }
