@@ -47,10 +47,10 @@ export default function Header() {
           <Image
             src="/images/brand/logo.png"
             alt={siteInfo.name}
-            width={220}
-            height={88}
+            width={280}
+            height={112}
             priority
-            className="h-10 w-auto object-contain sm:h-11 lg:h-12"
+            className="h-14 w-auto max-w-[220px] object-contain lg:h-16"
           />
           <span className="ml-3 hidden font-serif text-lg font-medium tracking-wide text-text md:block">
             Bloom Studio Salon
