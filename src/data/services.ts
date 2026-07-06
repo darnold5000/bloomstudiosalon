@@ -1,3 +1,5 @@
+import type { ServiceIconName } from "@/components/ServiceIcons";
+
 export type Service = {
   name: string;
   price: string;
@@ -87,47 +89,69 @@ export const serviceCategories: ServiceCategory[] = [
 export const servicesIntro =
   "Every appointment at Bloom is personalized to your hair, your goals, and your stylist's recommendations. Pricing varies by stylist, hair length, density, and time required. If you are unsure what to book, we recommend starting with a consultation.";
 
-export const serviceCategoryPreviews = [
+export type ServiceCategoryPreview = {
+  title: string;
+  description: string;
+  priceNote: string;
+  icon: ServiceIconName;
+  categoryId?: string;
+  href?: string;
+};
+
+export function getServicePreviewHref(preview: ServiceCategoryPreview): string {
+  if (preview.href) return preview.href;
+  if (preview.categoryId) return `/services#${preview.categoryId}`;
+  return "/services";
+}
+
+export const serviceCategoryPreviews: ServiceCategoryPreview[] = [
   {
     title: "Color",
     description: "Highlights, balayage, root touch-ups, and vivid color.",
-    priceNote: "Starting at $30+",
-    icon: "color" as const,
-    href: "/services#color",
+    priceNote: "View pricing",
+    icon: "color",
+    categoryId: "color",
   },
   {
     title: "Haircut & Style",
     description: "Personalized cuts and styling for every age and occasion.",
-    priceNote: "Starting at $5",
-    icon: "scissors" as const,
-    href: "/services#haircut-style",
+    priceNote: "View pricing",
+    icon: "scissors",
+    categoryId: "haircut-style",
   },
   {
     title: "Treatments",
     description: "Brazilian Blowout, keratin, deep conditioning, and more.",
-    priceNote: "Starting at $15+",
-    icon: "treatment" as const,
-    href: "/services#treatments",
+    priceNote: "View pricing",
+    icon: "treatment",
+    categoryId: "treatments",
+  },
+  {
+    title: "Styling",
+    description: "Blowouts, formal updos, and makeup for your next event.",
+    priceNote: "View pricing",
+    icon: "bridal",
+    categoryId: "styling",
+  },
+  {
+    title: "Lash & Brow",
+    description: "Lash lifts, tints, waxing, and brow shaping.",
+    priceNote: "View pricing",
+    icon: "lash",
+    categoryId: "waxing-lash-brow",
   },
   {
     title: "Bridal",
     description: "Wedding hair, makeup, and special event styling.",
     priceNote: "View bridal services",
-    icon: "bridal" as const,
+    icon: "bridal",
     href: "/bridal",
-  },
-  {
-    title: "Lash & Brow",
-    description: "Lash lifts, tints, waxing, and brow shaping.",
-    priceNote: "Starting at $5+",
-    icon: "lash" as const,
-    href: "/services#waxing-lash-brow",
   },
   {
     title: "Extensions",
     description: "Hand-tied and beaded weft extensions by expert stylists.",
     priceNote: "View stylists",
-    icon: "extensions" as const,
+    icon: "extensions",
     href: "/stylists",
   },
 ];

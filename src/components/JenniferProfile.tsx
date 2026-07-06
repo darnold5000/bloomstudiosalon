@@ -77,8 +77,8 @@ export function JenniferProfile({ stylist }: { stylist: Stylist }) {
   return (
     <section className="bg-surface py-6 sm:py-14">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-6 lg:grid lg:grid-cols-[280px_1fr] lg:gap-10">
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[200px] overflow-hidden rounded-2xl bg-background shadow-md sm:max-w-xs lg:mx-0 lg:max-w-sm lg:aspect-[3/4]">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-10">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[200px] shrink-0 overflow-hidden rounded-2xl bg-background shadow-md sm:max-w-xs lg:mx-0 lg:w-[280px] lg:max-w-none lg:aspect-[3/4]">
             <Image
               src={stylist.image}
               alt={stylist.name}
@@ -89,36 +89,33 @@ export function JenniferProfile({ stylist }: { stylist: Stylist }) {
             />
           </div>
 
-          <div className="min-w-0 lg:col-start-2">
-            <p className="text-sm font-semibold uppercase tracking-wider text-accent">
-              {stylist.yearsExperience}
-            </p>
-            <h1 className="mt-1 font-serif text-3xl font-medium text-text sm:mt-2 sm:text-5xl">
-              I&apos;m {stylist.preferredName ?? stylist.name.split(" ")[0]}
-            </h1>
-            <p className="mt-1 text-base text-muted sm:text-lg">{stylist.title}</p>
-          </div>
-
-          <div className="lg:col-start-2 lg:hidden">
-            <JenniferBookingCard stylist={stylist} bookingHref={bookingHref} />
-            <StylistContactLinks stylist={stylist} />
-          </div>
-
-          <div className="min-w-0 space-y-4 leading-relaxed text-muted lg:col-start-2">
-            <p>{stylist.bio}</p>
-            {stylist.bioContinued && <p>{stylist.bioContinued}</p>}
-            <p className="font-medium text-text">I know how sacred a hair appointment can be.</p>
-            {stylist.mission && (
-              <p className="border-l-4 border-accent-soft pl-4 font-medium italic text-text">
-                {stylist.mission}
+          <div className="flex min-w-0 flex-1 flex-col gap-6">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wider text-accent">
+                {stylist.yearsExperience}
               </p>
-            )}
-            {stylist.beliefs && <p>{stylist.beliefs}</p>}
-          </div>
+              <h1 className="mt-1 font-serif text-3xl font-medium text-text sm:mt-2 sm:text-5xl">
+                I&apos;m {stylist.preferredName ?? stylist.name.split(" ")[0]}
+              </h1>
+              <p className="mt-1 text-base text-muted sm:text-lg">{stylist.title}</p>
+            </div>
 
-          <div className="hidden lg:col-start-2 lg:block">
-            <JenniferBookingCard stylist={stylist} bookingHref={bookingHref} />
-            <StylistContactLinks stylist={stylist} />
+            <div>
+              <JenniferBookingCard stylist={stylist} bookingHref={bookingHref} />
+              <StylistContactLinks stylist={stylist} />
+            </div>
+
+            <div className="space-y-4 leading-relaxed text-muted">
+              <p>{stylist.bio}</p>
+              {stylist.bioContinued && <p>{stylist.bioContinued}</p>}
+              <p className="font-medium text-text">I know how sacred a hair appointment can be.</p>
+              {stylist.mission && (
+                <p className="border-l-4 border-accent-soft pl-4 font-medium italic text-text">
+                  {stylist.mission}
+                </p>
+              )}
+              {stylist.beliefs && <p>{stylist.beliefs}</p>}
+            </div>
           </div>
         </div>
       </div>
