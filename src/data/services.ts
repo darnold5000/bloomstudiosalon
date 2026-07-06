@@ -1,4 +1,5 @@
 import type { ServiceIconName } from "@/components/ServiceIcons";
+import { siteInfo } from "@/data/site";
 
 export type Service = {
   name: string;
@@ -96,11 +97,14 @@ export type ServiceCategoryPreview = {
   icon: ServiceIconName;
   categoryId?: string;
   href?: string;
+  infoId?: string;
+  infoContent?: string;
 };
 
 export function getServicePreviewHref(preview: ServiceCategoryPreview): string {
   if (preview.href) return preview.href;
   if (preview.categoryId) return `/services#${preview.categoryId}`;
+  if (preview.infoId) return `/services#${preview.infoId}`;
   return "/services";
 }
 
@@ -154,12 +158,19 @@ export const serviceCategoryPreviews: ServiceCategoryPreview[] = [
     icon: "extensions",
     href: "/stylists",
   },
+  {
+    title: "New Guest Consultation",
+    description: "Not sure where to start? We'll match you with the right stylist and service.",
+    priceNote: "Start here",
+    icon: "consultation",
+    href: "/new-guest",
+  },
+  {
+    title: "Birthday Party Packages",
+    description: "Celebrate with facials, blowouts, and pampering for your group.",
+    priceNote: "Learn more",
+    icon: "treatment",
+    infoId: "birthday-party",
+    infoContent: siteInfo.birthdayParty,
+  },
 ];
-
-export const newGuestConsultationPreview = {
-  title: "New Guest Consultation",
-  description:
-    "Not sure where to start? We'll match you with the right stylist and service.",
-  priceNote: "Start here",
-  href: "/new-guest",
-};

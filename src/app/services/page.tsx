@@ -24,11 +24,6 @@ export default function ServicesPage() {
           <ServiceMenuGrid />
 
           <div className="mx-auto mt-10 max-w-3xl space-y-6">
-            <div className="rounded-2xl border border-border bg-accent-soft/30 p-6 sm:p-8">
-              <h2 className="font-serif text-xl font-medium text-text">Birthday Party Packages</h2>
-              <p className="mt-3 leading-relaxed text-muted">{siteInfo.birthdayParty}</p>
-            </div>
-
             <div className="rounded-2xl border border-border bg-surface p-6 sm:p-8">
               <h2 className="font-serif text-xl font-medium text-text">Cancellation Policy</h2>
               <p className="mt-3 leading-relaxed text-muted">{siteInfo.cancellationPolicy}</p>

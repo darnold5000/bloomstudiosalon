@@ -87,8 +87,8 @@ export default function Footer() {
           </div>
           <nav className="mt-6 flex flex-col gap-2 text-sm text-white/75" aria-label="Footer navigation">
             <Link href="/services" className="transition hover:text-accent-soft">Services</Link>
-            <Link href="/new-guest" className="transition hover:text-accent-soft">New Guest</Link>
             <Link href="/stylists" className="transition hover:text-accent-soft">Stylists</Link>
+            <Link href="/new-guest" className="transition hover:text-accent-soft">New Guest</Link>
             <Link href="/bridal" className="transition hover:text-accent-soft">Bridal</Link>
             <Link href="/studio" className="transition hover:text-accent-soft">The Studio</Link>
             <Link href={siteInfo.links.shop} target="_blank" rel="noopener noreferrer" className="transition hover:text-accent-soft">Shop</Link>

@@ -9,8 +9,8 @@ import { siteInfo } from "@/data/site";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/new-guest", label: "New Guest" },
   { href: "/stylists", label: "Stylists" },
+  { href: "/new-guest", label: "New Guest" },
   { href: "/bridal", label: "Bridal" },
   { href: "/studio", label: "The Studio" },
 ];

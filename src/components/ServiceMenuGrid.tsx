@@ -3,10 +3,9 @@
 import { useEffect } from "react";
 import ServiceIconCard from "@/components/ServiceIconCard";
 import ServicePricingCard from "@/components/ServicePricingCard";
-import ServiceConsultationBanner from "@/components/ServiceConsultationBanner";
+import ServiceInfoCard from "@/components/ServiceInfoCard";
 import {
   getServicePreviewHref,
-  newGuestConsultationPreview,
   serviceCategories,
   serviceCategoryPreviews,
 } from "@/data/services";
@@ -26,39 +25,50 @@ export default function ServiceMenuGrid() {
   }, []);
 
   return (
-    <div>
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {serviceCategoryPreviews.map((preview) => {
-          if (preview.categoryId) {
-            const category = categoriesById[preview.categoryId];
-            if (!category) return null;
-
-            return (
-              <ServicePricingCard
-                key={preview.categoryId}
-                categoryId={preview.categoryId}
-                title={preview.title}
-                description={preview.description}
-                priceNote={preview.priceNote}
-                icon={preview.icon}
-                services={category.services}
-              />
-            );
-          }
+    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {serviceCategoryPreviews.map((preview) => {
+        if (preview.categoryId) {
+          const category = categoriesById[preview.categoryId];
+          if (!category) return null;
 
           return (
-            <ServiceIconCard
-              key={preview.title}
+            <ServicePricingCard
+              key={preview.categoryId}
+              categoryId={preview.categoryId}
               title={preview.title}
               description={preview.description}
               priceNote={preview.priceNote}
               icon={preview.icon}
-              href={getServicePreviewHref(preview)}
+              services={category.services}
             />
           );
-        })}
-      </div>
-      <ServiceConsultationBanner {...newGuestConsultationPreview} />
+        }
+
+        if (preview.infoId && preview.infoContent) {
+          return (
+            <ServiceInfoCard
+              key={preview.infoId}
+              infoId={preview.infoId}
+              title={preview.title}
+              description={preview.description}
+              priceNote={preview.priceNote}
+              icon={preview.icon}
+              content={preview.infoContent}
+            />
+          );
+        }
+
+        return (
+          <ServiceIconCard
+            key={preview.title}
+            title={preview.title}
+            description={preview.description}
+            priceNote={preview.priceNote}
+            icon={preview.icon}
+            href={getServicePreviewHref(preview)}
+          />
+        );
+      })}
     </div>
   );
 }
