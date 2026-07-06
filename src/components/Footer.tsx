@@ -98,7 +98,19 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10 px-4 py-6 text-center text-sm text-white/60">
-        {siteInfo.copyright}
+        <p>{siteInfo.copyright}</p>
+        <p className="mt-2 text-white/45">
+          Website designed &amp; maintained by{" "}
+          <a
+            href="https://hiresignalworks.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/60 underline decoration-white/20 underline-offset-2 transition hover:text-accent-soft hover:decoration-accent-soft"
+          >
+            Signal Works
+          </a>
+          .
+        </p>
       </div>
     </footer>
   );
