@@ -17,11 +17,11 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Willow & Mane | Hair Salon in Avon, Indiana",
+    default: "Willow & Mane | Hair Salon in Plainfield, Indiana",
     template: "%s | Willow & Mane",
   },
   description:
-    "Willow & Mane is a luxury four-chair hair salon in Avon, Indiana offering color, cuts, treatments, bridal styling, extensions, and personalized guest experiences.",
+    "Willow & Mane is a luxury four-chair hair salon in Plainfield, Indiana offering color, cuts, treatments, bridal styling, extensions, and personalized guest experiences.",
   metadataBase: new URL("https://www.willowmane.com"),
 };
 

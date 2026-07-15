@@ -6,7 +6,7 @@ import { siteInfo } from "@/data/site";
 export const metadata: Metadata = {
   title: "Promotions",
   description:
-    "Current promotions at Willow & Mane in Avon, Indiana. Leave a review and receive a gift certificate for your next appointment.",
+    "Current promotions at Willow & Mane in Plainfield, Indiana. Leave a review and receive a gift certificate for your next appointment.",
 };
 
 export default function PromotionsPage() {

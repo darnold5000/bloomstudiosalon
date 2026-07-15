@@ -3,13 +3,13 @@ export const siteInfo = {
   tagline: "Rooted in care. Styled with intention.",
   taglineLines: ["Rooted in care", "Styled with intention", "Willow & Mane."],
   address: {
-    street: "192 N Avon Ave. suite 370",
-    city: "Avon",
+    street: "192 N Main St. suite 370",
+    city: "Plainfield",
     state: "IN",
-    zip: "46123",
-    full: "192 N Avon Ave. suite 370, Avon, IN 46123",
+    zip: "46168",
+    full: "192 N Main St. suite 370, Plainfield, IN 46168",
     mapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=192+N+Avon+Ave+suite+370+Avon+IN+46123",
+      "https://www.google.com/maps/search/?api=1&query=192+N+Main+St+suite+370+Plainfield+IN+46168",
   },
   email: "hello@willowmane.com",
   phone: "(463) 555-0192",
@@ -21,7 +21,7 @@ export const siteInfo = {
     facebook: "https://www.facebook.com/willowmane.salon",
     instagram: "https://www.instagram.com/willowandmane",
     pinterest: "https://www.pinterest.com/willowmane",
-    yelp: "https://www.yelp.com/biz/willow-and-mane-avon",
+    yelp: "https://www.yelp.com/biz/willow-and-mane-plainfield",
   },
   links: {
     bookNow: "/stylists",

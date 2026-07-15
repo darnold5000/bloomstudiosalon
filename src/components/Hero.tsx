@@ -35,7 +35,7 @@ export default function Hero({
 
       <div className="relative z-10 mx-auto flex min-h-[85vh] max-w-7xl flex-col justify-center px-5 py-16 sm:px-6 sm:py-20 lg:px-8">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent-soft sm:text-sm [text-shadow:0_1px_6px_rgba(0,0,0,0.35)]">
-          Avon, Indiana
+          Plainfield, Indiana
         </p>
         <h1 className="max-w-xl font-serif text-[2rem] font-medium leading-[1.15] text-white sm:max-w-2xl sm:text-5xl lg:text-6xl [text-shadow:0_2px_12px_rgba(0,0,0,0.4)]">
           {headline}

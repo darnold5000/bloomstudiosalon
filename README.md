@@ -1,6 +1,6 @@
 # Willow & Mane
 
-Modern website for Willow & Mane — a luxury four-chair hair salon in Avon, Indiana.
+Modern website for Willow & Mane — a luxury four-chair hair salon in Plainfield, Indiana.
 
 ## Stack
 
@@ -36,7 +36,7 @@ public/images/   # Salon photography and brand assets
 
 ## Stylist scheduling (Calendly)
 
-Amanda, Brittany, Maya, and Jillane use inline Calendly embeds on their profile pages. Jennifer Dodd continues to use online booking.
+Amanda, Brittany, Maya, and Jillane use inline Calendly embeds on their profile pages. Jennifer continues to use online booking.
 
 1. Copy `.env.example` to `.env.local`
 2. Add each stylist's Calendly event URL:

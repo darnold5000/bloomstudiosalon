@@ -7,7 +7,7 @@ import { stylists } from "@/data/stylists";
 export const metadata: Metadata = {
   title: "Our Stylists",
   description:
-    "Meet the stylists at Willow & Mane in Avon, Indiana. Choose your stylist based on experience, specialty, and the look you want to achieve.",
+    "Meet the stylists at Willow & Mane in Plainfield, Indiana. Choose your stylist based on experience, specialty, and the look you want to achieve.",
 };
 
 export default function StylistsPage() {

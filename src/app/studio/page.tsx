@@ -7,7 +7,7 @@ import { studioAmenities } from "@/data/site";
 export const metadata: Metadata = {
   title: "The Studio",
   description:
-    "Learn about Willow & Mane — a luxury four-chair boutique salon in Avon, Indiana, opened in August 2018.",
+    "Learn about Willow & Mane — a luxury four-chair boutique salon in Plainfield, Indiana, opened in August 2018.",
 };
 
 const galleryImages = [
@@ -24,7 +24,7 @@ export default function StudioPage() {
     <>
       <PageHeader
         title="The Studio"
-        description="An intimate, four-chair luxury salon in Avon, Indiana — where every detail is designed with you in mind."
+        description="An intimate, four-chair luxury salon — where every detail is designed with you in mind."
       />
 
       <section className="py-12 sm:py-16">
@@ -32,9 +32,8 @@ export default function StudioPage() {
           <h2 className="font-serif text-3xl font-medium text-text">About Willow & Mane</h2>
           <div className="mt-6 space-y-4 leading-relaxed text-muted">
             <p>
-              In August of 2018, Jennifer opened the doors to Willow & Mane in Avon, Indiana —
-              located next to locally owned businesses including a boutique across the street, Moody
-              Meats, a yoga studio, and a massage therapist studio.
+              In August of 2018, Jennifer opened the doors to Willow & Mane — creating an intimate
+              space where every guest feels welcomed, cared for, and at home.
             </p>
             <p>
               Where did the name Willow & Mane come from? Jennifer wanted a name that felt grounded

@@ -8,7 +8,7 @@ import { siteInfo } from "@/data/site";
 export const metadata: Metadata = {
   title: "Bridal & Special Events",
   description:
-    "Wedding hair and makeup services at Willow & Mane in Avon, Indiana. In-salon bridal pricing, bridal party styling, and special event packages.",
+    "Wedding hair and makeup services at Willow & Mane in Plainfield, Indiana. In-salon bridal pricing, bridal party styling, and special event packages.",
 };
 
 function ServiceList({

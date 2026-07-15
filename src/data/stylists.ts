@@ -22,12 +22,12 @@ export type Stylist = {
 export const stylists: Stylist[] = [
   {
     slug: "jennifer",
-    name: "Jennifer Dodd",
+    name: "Jennifer",
     preferredName: "Jenn",
     title: "Master Hairstylist & Salon Owner",
     image: "/images/stylists/jennifer.jpg",
     yearsExperience: "18+ years",
-    bio: "Hi loves! I'm a Master Hairstylist from Indianapolis, IN. I specialize in lived-in color, grey blending, hand-tied extensions, and also your bridal girl. When I'm out of the salon you can catch me with a good coffee in hand, working in my gardens, a good book, and being with my children.",
+    bio: "Hi loves! I'm a Master Hairstylist specializing in lived-in color, grey blending, hand-tied extensions, and bridal styling. When I'm out of the salon you can catch me with a good coffee in hand, working in my gardens, a good book, and being with my children.",
     bioContinued:
       "I've been in the industry for 18+ years! My passion for beauty has turned my beautiful life into an amazing journey. I've been an independent stylist most of those years and a salon owner. I really love what I do and am so grateful to be able to share my passion with others.",
     mission:
