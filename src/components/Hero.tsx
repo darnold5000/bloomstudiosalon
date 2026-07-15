@@ -15,7 +15,7 @@ export default function Hero({
   headline,
   subheadline,
   imageSrc = "/images/hero/salon-interior.jpg",
-  imageAlt = "Bloom Studio Salon interior",
+  imageAlt = "Willow & Mane salon interior",
   showTagline = false,
 }: HeroProps) {
   return (

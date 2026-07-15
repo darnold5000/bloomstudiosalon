@@ -1,7 +1,7 @@
 const stylistCalendlyEnvKeys: Record<string, string> = {
   amanda: "NEXT_PUBLIC_CALENDLY_AMANDA_URL",
   brittany: "NEXT_PUBLIC_CALENDLY_BRITTANY_URL",
-  sydney: "NEXT_PUBLIC_CALENDLY_SYDNEY_URL",
+  maya: "NEXT_PUBLIC_CALENDLY_MAYA_URL",
   jillane: "NEXT_PUBLIC_CALENDLY_JILLANE_URL",
 };
 

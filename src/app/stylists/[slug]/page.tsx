@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: stylist.name,
-    description: `Book an appointment with ${stylist.name}, ${stylist.title} at Bloom Studio Salon in Avon, Indiana.`,
+    description: `Book an appointment with ${stylist.name}, ${stylist.title} at Willow & Mane in Avon, Indiana.`,
   };
 }
 

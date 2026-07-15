@@ -1,6 +1,6 @@
-# Bloom Studio Salon
+# Willow & Mane
 
-Modern website for [Bloom Studio Salon](https://www.bloomhairstudiosalon.com) — a luxury four-chair hair salon in Avon, Indiana.
+Modern website for Willow & Mane — a luxury four-chair hair salon in Avon, Indiana.
 
 ## Stack
 
@@ -36,7 +36,7 @@ public/images/   # Salon photography and brand assets
 
 ## Stylist scheduling (Calendly)
 
-Amanda, Brittany, Sydney, and Jillane use inline Calendly embeds on their profile pages. Jennifer Dodd continues to use Vagaro.
+Amanda, Brittany, Maya, and Jillane use inline Calendly embeds on their profile pages. Jennifer Dodd continues to use online booking.
 
 1. Copy `.env.example` to `.env.local`
 2. Add each stylist's Calendly event URL:
@@ -44,7 +44,7 @@ Amanda, Brittany, Sydney, and Jillane use inline Calendly embeds on their profil
 ```bash
 NEXT_PUBLIC_CALENDLY_AMANDA_URL=https://calendly.com/...
 NEXT_PUBLIC_CALENDLY_BRITTANY_URL=https://calendly.com/...
-NEXT_PUBLIC_CALENDLY_SYDNEY_URL=https://calendly.com/...
+NEXT_PUBLIC_CALENDLY_MAYA_URL=https://calendly.com/...
 NEXT_PUBLIC_CALENDLY_JILLANE_URL=https://calendly.com/...
 ```
 

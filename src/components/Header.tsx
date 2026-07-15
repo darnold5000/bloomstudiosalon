@@ -53,7 +53,7 @@ export default function Header() {
             className="h-[4.25rem] w-auto max-w-[9.5rem] object-contain object-left sm:h-16 sm:max-w-[10.5rem] lg:h-[4.5rem] lg:max-w-[11rem]"
           />
           <span className="ml-3 hidden font-serif text-lg font-medium tracking-wide text-text md:block">
-            Bloom Studio Salon
+            {siteInfo.name}
           </span>
         </Link>
 

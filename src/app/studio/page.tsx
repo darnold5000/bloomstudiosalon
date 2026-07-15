@@ -7,16 +7,16 @@ import { studioAmenities } from "@/data/site";
 export const metadata: Metadata = {
   title: "The Studio",
   description:
-    "Learn about Bloom Studio Salon — a luxury four-chair boutique salon in Avon, Indiana, opened in August 2018.",
+    "Learn about Willow & Mane — a luxury four-chair boutique salon in Avon, Indiana, opened in August 2018.",
 };
 
 const galleryImages = [
-  { src: "/images/studio/studio-1.jpg", alt: "Bloom Studio Salon interior" },
-  { src: "/images/studio/studio-2.jpg", alt: "Bloom Studio Salon styling area" },
-  { src: "/images/hero/salon-interior.jpg", alt: "Bloom Studio Salon welcome area" },
-  { src: "/images/hero/salon-chairs.jpg", alt: "Bloom Studio Salon chairs" },
-  { src: "/images/hero/salon-lifestyle.jpg", alt: "Hair styling at Bloom Studio Salon" },
-  { src: "/images/gallery/gallery-1.jpg", alt: "Bloom Studio Salon guest experience" },
+  { src: "/images/studio/studio-1.jpg", alt: "Willow & Mane interior" },
+  { src: "/images/studio/studio-2.jpg", alt: "Willow & Mane styling area" },
+  { src: "/images/hero/salon-interior.jpg", alt: "Willow & Mane welcome area" },
+  { src: "/images/hero/salon-chairs.jpg", alt: "Willow & Mane chairs" },
+  { src: "/images/hero/salon-lifestyle.jpg", alt: "Hair styling at Willow & Mane" },
+  { src: "/images/gallery/gallery-1.jpg", alt: "Willow & Mane guest experience" },
 ];
 
 export default function StudioPage() {
@@ -29,18 +29,19 @@ export default function StudioPage() {
 
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="font-serif text-3xl font-medium text-text">About Bloom</h2>
+          <h2 className="font-serif text-3xl font-medium text-text">About Willow & Mane</h2>
           <div className="mt-6 space-y-4 leading-relaxed text-muted">
             <p>
-              In August of 2018, Jennifer opened the doors to Bloom Studio Salon in Avon, Indiana —
+              In August of 2018, Jennifer opened the doors to Willow & Mane in Avon, Indiana —
               located next to locally owned businesses including a boutique across the street, Moody
               Meats, a yoga studio, and a massage therapist studio.
             </p>
             <p>
-              Where did the name Bloom Studio Salon come from? Jennifer wanted a name that was simple
-              but inspiring. Bloom one day just came to her, and she loved it. The meaning behind
-              Bloom is &ldquo;Inspire Be-you-ty. Create Confidence. Bloom.&rdquo; Like many stylists,
-              she loves to make clients feel great while they are with us.
+              Where did the name Willow & Mane come from? Jennifer wanted a name that felt grounded
+              and graceful — something that spoke to both strength and softness. Willow &amp; Mane
+              captures that balance: rooted care, beautiful hair, and a salon experience that helps
+              every guest leave feeling confident. Like many stylists, she loves to make clients feel
+              great while they are with us.
             </p>
           </div>
         </div>
@@ -50,7 +51,7 @@ export default function StudioPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <h2 className="font-serif text-3xl font-medium text-text">The Guest Experience</h2>
           <p className="mt-6 leading-relaxed text-muted">
-            Bloom Studio Salon is an intimate, four-chair luxury salon. Though we may be small, we
+            Willow & Mane is an intimate, four-chair luxury salon. Though we may be small, we
             leave a big impact when it comes to attention to detail. From our snack bar well stocked
             with healthy choices to our customized coffee bar and phone charging station, we have
             thought of everything our guest might need.

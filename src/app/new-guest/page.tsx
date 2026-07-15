@@ -7,7 +7,7 @@ import { newGuestSteps, siteInfo } from "@/data/site";
 export const metadata: Metadata = {
   title: "New Guest",
   description:
-    "Welcome to Bloom Studio Salon. Learn what to expect as a new guest and complete your new guest profile before your first visit.",
+    "Welcome to Willow & Mane. Learn what to expect as a new guest and complete your new guest profile before your first visit.",
 };
 
 export default function NewGuestPage() {
@@ -15,7 +15,7 @@ export default function NewGuestPage() {
     <>
       <PageHeader
         title="Welcome, New Guest"
-        description="We're so glad you're here. Here's what to expect at your first visit to Bloom Studio Salon."
+        description="We're so glad you're here. Here's what to expect at your first visit to Willow & Mane."
       />
 
       <section className="py-12 sm:py-16">

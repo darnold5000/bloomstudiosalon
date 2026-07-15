@@ -88,7 +88,7 @@ export const serviceCategories: ServiceCategory[] = [
 ];
 
 export const servicesIntro =
-  "Every appointment at Bloom is personalized to your hair, your goals, and your stylist's recommendations. Pricing varies by stylist, hair length, density, and time required. If you are unsure what to book, we recommend starting with a consultation.";
+  "Every appointment at Willow & Mane is personalized to your hair, your goals, and your stylist's recommendations. Pricing varies by stylist, hair length, density, and time required. If you are unsure what to book, we recommend starting with a consultation.";
 
 export type ServiceCategoryPreview = {
   title: string;

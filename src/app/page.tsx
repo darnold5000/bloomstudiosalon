@@ -30,7 +30,7 @@ export default function HomePage() {
             ))}
           </div>
           <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-muted">
-            From the moment you enter Bloom Studio Salon, we want you to feel welcomed and at home.
+            From the moment you enter Willow & Mane, we want you to feel welcomed and at home.
             Your thorough consultation, personalized hair experience, and future bookings will all be
             seamlessly customized as a perfect fit for you.
           </p>
@@ -63,12 +63,12 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <ContentImage
             src="/images/hero/salon-chairs.jpg"
-            alt="Stylist consultation at Bloom Studio Salon"
+            alt="Stylist consultation at Willow & Mane"
           />
           <div>
-            <h2 className="font-serif text-3xl font-medium text-text sm:text-4xl">New to Bloom?</h2>
+            <h2 className="font-serif text-3xl font-medium text-text sm:text-4xl">New to Willow & Mane?</h2>
             <p className="mt-4 text-lg leading-relaxed text-muted">
-              Welcome! Bloom is staffed by experts who are at the top of their game. You can choose
+              Welcome! Willow & Mane is staffed by experts who are at the top of their game. You can choose
               your stylist based on industry experience, giving you a choice of prices, but the same
               luxury guest experience.
             </p>
@@ -92,7 +92,7 @@ export default function HomePage() {
           <div className="order-2 lg:order-1">
             <h2 className="font-serif text-3xl font-medium text-text sm:text-4xl">The Studio Experience</h2>
             <p className="mt-4 text-lg leading-relaxed text-muted">
-              Bloom Studio Salon is an intimate, four-chair luxury salon. Though we may be small, we
+              Willow & Mane is an intimate, four-chair luxury salon. Though we may be small, we
               leave a big impact when it comes to attention to detail. At the end of the day, we not
               only want to deliver good hair — we want you to feel as though you&apos;re a guest in
               our home.
@@ -115,7 +115,7 @@ export default function HomePage() {
           <ContentImage
             className="order-1 lg:order-2"
             src="/images/studio/studio-1.jpg"
-            alt="Bloom Studio Salon interior with amenities"
+            alt="Willow & Mane interior with amenities"
           />
         </div>
       </section>

@@ -16,12 +16,12 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Bloom Studio Salon | Hair Salon in Avon, Indiana",
-    template: "%s | Bloom Studio Salon",
+    default: "Willow & Mane | Hair Salon in Avon, Indiana",
+    template: "%s | Willow & Mane",
   },
   description:
-    "Bloom Studio Salon is a luxury four-chair hair salon in Avon, Indiana offering color, cuts, treatments, bridal styling, extensions, and personalized guest experiences.",
-  metadataBase: new URL("https://www.bloomhairstudiosalon.com"),
+    "Willow & Mane is a luxury four-chair hair salon in Avon, Indiana offering color, cuts, treatments, bridal styling, extensions, and personalized guest experiences.",
+  metadataBase: new URL("https://www.willowmane.com"),
 };
 
 export default function RootLayout({

@@ -8,7 +8,7 @@ import { siteInfo } from "@/data/site";
 export const metadata: Metadata = {
   title: "Hair Services & Pricing",
   description:
-    "View Bloom Studio Salon's service menu including color, haircuts, styling, treatments, lash and brow services, and special occasion styling.",
+    "View Willow & Mane's service menu including color, haircuts, styling, treatments, lash and brow services, and special occasion styling.",
 };
 
 export default function ServicesPage() {

@@ -7,7 +7,7 @@ import { stylists } from "@/data/stylists";
 export const metadata: Metadata = {
   title: "Our Stylists",
   description:
-    "Meet the stylists at Bloom Studio Salon in Avon, Indiana. Choose your stylist based on experience, specialty, and the look you want to achieve.",
+    "Meet the stylists at Willow & Mane in Avon, Indiana. Choose your stylist based on experience, specialty, and the look you want to achieve.",
 };
 
 export default function StylistsPage() {
@@ -15,7 +15,7 @@ export default function StylistsPage() {
     <>
       <PageHeader
         title="Our Stylists"
-        description="Bloom is staffed by experts at the top of their game. Choose your stylist based on industry experience — same luxury guest experience, personalized to you."
+        description="Willow & Mane is staffed by experts at the top of their game. Choose your stylist based on industry experience — same luxury guest experience, personalized to you."
       />
 
       <section className="py-12 sm:py-16">
