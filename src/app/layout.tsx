@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   description:
     "Bloom Studio Salon is a luxury four-chair hair salon in Avon, Indiana offering color, cuts, treatments, bridal styling, extensions, and personalized guest experiences.",
   metadataBase: new URL("https://www.bloomhairstudiosalon.com"),
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({

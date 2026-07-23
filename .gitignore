@@ -40,5 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Separate stylist booking site (own repo)
+# Separate stylist booking sites (own repos)
 styledbysydney/
+hairbyamanda/
